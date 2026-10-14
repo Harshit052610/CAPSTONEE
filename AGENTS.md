@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Sentinel shares one workspace across overview, analyze, and history routes so event and response behavior stays consistent.
+- Validate event payloads with the shared schema in both the browser and server handler; normalize only actual webhook response fields, leaving missing values empty.
+- Send n8n requests through a public server function with a server-only HTTPS destination and optional bearer secret; browser code never receives webhook credentials.
+- Theme preferences and capped analysis history use browser storage, as explicitly requested; do not move that history into Cloud without a new requirement.
