@@ -13,10 +13,10 @@
 html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 body { margin:0; background:var(--background); color:var(--foreground); font-family:var(--font-sans); font-size:14px; -webkit-font-smoothing:antialiased; }
 h1,h2,h3 { font-family:var(--font-display); }
-button,input { font:inherit; }
+button,input { font-family:inherit; }
 button,a,input { -webkit-tap-highlight-color:transparent; }
 .app-shell { min-height:100vh; transition: background .25s, color .25s; }
-.page-width { max-width:1240px; margin:auto; padding-inline:40px; }
+.page-width { min-width:0; max-width:1240px; margin:auto; padding-inline:40px; }
 .topbar { height:83px; border-bottom:1px solid var(--border); background:var(--background); }
 .nav-inner { height:100%; display:flex; align-items:center; justify-content:space-between; gap:36px; }
 .brand { display:flex; align-items:center; gap:11px; font-family:var(--font-display); font-weight:750; font-size:21px; white-space:nowrap; }
@@ -49,6 +49,7 @@ button,a,input { -webkit-tap-highlight-color:transparent; }
 .metric { position:relative; padding:20px; border:1px solid var(--border); border-radius:10px; background:var(--card); box-shadow:var(--shadow-soft); overflow:hidden; }
 .metric-header { display:flex; align-items:center; justify-content:space-between; font-size:11px; color:var(--muted-foreground); }
 .metric-header svg { width:15px; }
+.metric-status { font-size:22px!important; line-height:1.4; }
 .metric-number { font-family:var(--font-display); font-size:30px; font-weight:600; margin:14px 0 9px; }
 .metric-bottom { font-size:10px; color:var(--muted-foreground); display:flex; gap:5px; align-items:center; }
 .sparkline { position:absolute; width:85px; height:35px; right:20px; bottom:20px; color:var(--primary); opacity:.75; }
@@ -137,5 +138,8 @@ tbody tr:last-child td { border-bottom:0; }
 [data-theme='light'] .hero p,[data-theme='warm'] .hero p { color:oklch(.73 .012 285); }
 @media(min-width:1500px) { .hero { min-height:370px; } }
 @media(max-width:950px) { .page-width { padding-inline:24px; } .nav-inner { gap:15px; } .connection { display:none; } .workspace-grid { grid-template-columns:minmax(0,1fr) 260px; gap:16px; } .field-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .hero h1 { font-size:40px; } .hero-copy { width:68%; } .metric { padding:16px; } .sparkline { width:60px; right:12px; } .hero-note { display:none; } }
-@media(max-width:650px) { .page-width { padding-inline:18px; } .topbar { height:auto; padding:16px 0 12px; } .nav-inner { flex-wrap:wrap; gap:14px; } .brand { font-size:19px; } .nav-links { order:3; width:100%; gap:6px; } .nav-link { flex:1; text-align:center; } .hero { min-height:330px; margin-top:6px; } .hero-image { opacity:.35; object-position:70%; } .hero-copy { width:100%; } .hero h1 { font-size:35px; max-width:400px; } .hero p { max-width:310px; font-size:12px; } .hero::after { background:linear-gradient(90deg,var(--background),transparent); } [data-theme='light'] .hero,[data-theme='warm'] .hero { padding-left:18px; margin-top:16px; } .metric-grid { grid-template-columns:repeat(2,1fr); gap:10px; } .metric-number { font-size:26px; } .metric { padding:15px; } .sparkline { width:55px; height:25px; } .workspace-grid { grid-template-columns:1fr; } .workspace { margin-top:30px; } .form-body { padding:18px; } .form-header { padding:18px; } .form-footer { padding:16px 18px; flex-wrap:wrap; } .field-grid { gap:17px 12px; } .presets-list { display:grid; grid-template-columns:1fr 1fr; gap:10px; } .preset { margin:0; padding:12px; } .preset-top { gap:7px; } .preset h4 { font-size:10px; } .preset p { font-size:9px; } .preset-icon { width:25px; height:25px; flex-shrink:0; } .preset:last-child { grid-column:1/-1; } .result-grid { grid-template-columns:1fr; } .history-section .section-heading { flex-wrap:wrap; } .history-tools { width:100%; } .search { flex:1; } .search input { width:100%; } .footer-inner { flex-wrap:wrap; } .footer-copy { width:100%; order:3; } }
+@media(max-width:650px) { .page-width { padding-inline:18px; } .topbar { height:auto; padding:16px 0 12px; } .nav-inner { flex-wrap:wrap; gap:14px; } .brand { font-size:19px; } .nav-links { order:3; width:100%; gap:6px; } .nav-link { flex:1; text-align:center; } .hero { min-height:330px; margin-top:6px; } .hero-image { opacity:.35; object-position:70%; } .hero-copy { width:100%; } .hero h1 { font-size:35px; max-width:400px; } .hero p { max-width:310px; font-size:12px; } .hero::after { background:linear-gradient(90deg,var(--background),transparent); } [data-theme='light'] .hero,[data-theme='warm'] .hero { padding-left:18px; margin-top:16px; } .metric-grid { grid-template-columns:repeat(2,1fr); gap:10px; } .metric-status { font-size:22px!important; line-height:1.4; }
+.metric-number { font-size:26px; } .metric { padding:15px; } .sparkline { width:55px; height:25px; } .workspace-grid { grid-template-columns:1fr; } .workspace { margin-top:30px; } .form-body { padding:18px; } .form-header { padding:18px; } .form-footer { padding:16px 18px; flex-wrap:wrap; } .field-grid { gap:17px 12px; } .presets-list { display:grid; grid-template-columns:1fr 1fr; gap:10px; } .preset { margin:0; padding:12px; } .preset-top { gap:7px; } .preset h4 { font-size:10px; } .preset p { font-size:9px; } .preset-icon { width:25px; height:25px; flex-shrink:0; } .preset:last-child { grid-column:1/-1; } .result-grid { grid-template-columns:1fr; } .history-section .section-heading { flex-wrap:wrap; } .history-tools { width:100%; } .search { flex:1; } .search input { width:100%; } .footer-inner { flex-wrap:wrap; } .footer-copy { width:100%; order:3; } }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+
+@media(max-width:650px) { .overview .section-heading { flex-wrap:wrap; } .workspace .section-heading { align-items:flex-start; } .workspace .section-heading .sample-label { display:none; } .metric-status { font-size:18px!important; overflow-wrap:anywhere; } .metric-bottom { font-size:9px; } .section-heading h2 { font-size:16px; } .hero h1 { font-size:32px; } .metric { min-width:0; } }
