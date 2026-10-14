@@ -109,7 +109,7 @@ progress::-webkit-progress-value { background:var(--primary); border-radius:3px;
 .search { position:relative; }
 .search svg { position:absolute; width:13px; height:13px; left:10px; top:11px; color:var(--muted-foreground); }
 .search input { background:var(--card); border:1px solid var(--border); border-radius:6px; padding:8px 10px 8px 31px; font-size:10px; width:190px; color:var(--foreground); }
-.table-wrap { border:1px solid var(--border); border-radius:9px; overflow-x:auto; background:var(--card); }
+.table-wrap { position:relative; border:1px solid var(--border); border-radius:9px; overflow-x:auto; background:var(--card); }
 table { width:100%; border-collapse:collapse; text-align:left; white-space:nowrap; }
 th { font-size:10px; font-weight:500; color:var(--muted-foreground); background:var(--secondary); }
 th,td { padding:14px 19px; border-bottom:1px solid var(--border); }
@@ -143,3 +143,5 @@ tbody tr:last-child td { border-bottom:0; }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
 
 @media(max-width:650px) { .overview .section-heading { flex-wrap:wrap; } .workspace .section-heading { align-items:flex-start; } .workspace .section-heading .sample-label { display:none; } .metric-status { font-size:18px!important; overflow-wrap:anywhere; } .metric-bottom { font-size:9px; } .section-heading h2 { font-size:16px; } .hero h1 { font-size:32px; } .metric { min-width:0; } }
+
+.overview .theme-switch button { width:auto; padding-inline:9px; font-size:10px; }
