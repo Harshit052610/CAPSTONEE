@@ -36,7 +36,7 @@ h1,h2,h3,h4,p { margin:0; } button,input { font-family:inherit; } a { color:inhe
 @media(min-width:651px) and (max-width:800px) { .hero { overflow:hidden; } }
 @media(max-width:650px) { .hero { min-height:655px; } }
 /* Reference headline: isolated from the application's body typography. */
-.hero h1 { font-family:var(--font-headline); font-size:86px; line-height:.99; font-weight:500; letter-spacing:0; margin:24px 0 25px; max-width:680px; }
+.hero h1 { font-family:var(--font-headline); font-size:86px; line-height:.99; font-weight:500; letter-spacing:0; margin:24px 0 25px; max-width:706px; }
 .hero h1 em { font-family:'Playfair Display Variable',serif; font-size:inherit; font-weight:450; font-style:italic; letter-spacing:-.08em; line-height:inherit; color:var(--accent-ink); }
 :root { --signal-backdrop:color-mix(in oklch,var(--primary) 24%,transparent); --signal-contact:color-mix(in oklch,var(--primary) 12%,transparent); --signal-tag-shadow:0 12px 28px color-mix(in oklch,var(--foreground) 7%,transparent); }
 .signal-art { width:390px; height:360px; transform:scale(.8); transform-origin:right center; }
