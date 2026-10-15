@@ -31,3 +31,20 @@ h1,h2,h3,h4,p { margin:0; } button,input { font-family:inherit; } a { color:inhe
 .table-wrap { position:relative; }
 @media(min-width:651px) and (max-width:800px) { .hero { overflow:hidden; } }
 @media(max-width:650px) { .hero { min-height:655px; } }
+/* Refined headline and compact reference signal. */
+.hero h1 { font-size:86px; line-height:1.06; }
+.hero h1 em { font-size:98px; white-space:normal; max-width:700px; line-height:1; }
+.signal-art { transform:scale(.88); transform-origin:right center; }
+.signal-grid { inset:35px 10px 30px 45px; opacity:.65; box-shadow:45px -18px 80px 12px color-mix(in oklch,var(--primary) 28%,transparent); }
+.signal-card { transform:rotate(-3.5deg); box-shadow:var(--signal-shadow),-20px 26px 65px color-mix(in oklch,var(--primary) 12%,transparent); }
+.signal-wave rect { transform-box:fill-box; transform-origin:center; animation:signal-breathe 3.6s ease-in-out infinite; }
+.signal-wave rect:nth-child(3n) { animation-delay:-1.2s; }
+.signal-wave rect:nth-child(3n + 1) { animation-delay:-2.4s; }
+.known-device { right:-4px; top:58px; }
+.low-risk { bottom:13px; right:42px; }
+@keyframes signal-breathe { 0%,100% { transform:scaleY(.82); } 50% { transform:scaleY(1.08); } }
+@media(max-width:1200px) { .hero h1 { font-size:70px; }.hero h1 em { font-size:82px; max-width:590px; }.signal-art { transform:scale(.76); } }
+@media(max-width:950px) { .hero h1 { font-size:58px; }.hero h1 em { font-size:68px; max-width:470px; }.signal-art { transform:scale(.54); } }
+@media(min-width:651px) and (max-width:800px) { .signal-art { top:415px; transform:scale(.43); } }
+@media(max-width:650px) { .hero h1 { font-size:46px; }.hero h1 em { font-size:52px; max-width:340px; }.signal-art { transform:scale(.52); }.signal-grid { box-shadow:32px -10px 60px 10px color-mix(in oklch,var(--primary) 25%,transparent); } }
+@media(prefers-reduced-motion:reduce) { .signal-wave rect { animation:none; } }
