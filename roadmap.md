@@ -1,6 +1,6 @@
 # Sentinel AI
-- [ ] Match supplied references: typography, hero, navigation, metrics, workspace, history risk pulse, and themes
-- [ ] Verify redesigned pages, theme persistence, and editable examples
+- [x] Match supplied references: typography, hero, navigation, metrics, workspace, history risk pulse, and themes
+- [x] Verify redesigned pages, theme persistence, and editable examples
 - [x] Premium interface, three persistent themes, overview and navigation
 - [x] Validated event workspace and five editable examples
 - [x] Secure n8n proxy, actual response mapping, loading and errors

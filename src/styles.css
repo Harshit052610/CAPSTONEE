@@ -30,3 +30,4 @@ h1,h2,h3,h4,p { margin:0; } button,input { font-family:inherit; } a { color:inhe
 @media(max-width:650px) { .hero h1 { white-space:normal; }.hero h1 em { font-size:56px; }.hero { overflow:hidden; }.signal-art { height:180px; margin-top:-20px; }.pulse-stats div { min-width:0; } }
 .table-wrap { position:relative; }
 @media(min-width:651px) and (max-width:800px) { .hero { overflow:hidden; } }
+@media(max-width:650px) { .hero { min-height:655px; } }
