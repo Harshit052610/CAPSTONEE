@@ -28,3 +28,5 @@ h1,h2,h3,h4,p { margin:0; } button,input { font-family:inherit; } a { color:inhe
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
 @media(min-width:651px) and (max-width:800px) { .hero { min-height:720px; }.hero-copy { width:100%; padding-top:50px; }.hero p { max-width:440px; }.signal-art { top:425px; opacity:1; transform:scale(.47); right:-5px; }.hero-actions { max-width:400px; }.workspace-grid { grid-template-columns:190px minmax(0,1fr); }.form-header { flex-wrap:wrap; } }
 @media(max-width:650px) { .hero h1 { white-space:normal; }.hero h1 em { font-size:56px; }.hero { overflow:hidden; }.signal-art { height:180px; margin-top:-20px; }.pulse-stats div { min-width:0; } }
+.table-wrap { position:relative; }
+@media(min-width:651px) and (max-width:800px) { .hero { overflow:hidden; } }
