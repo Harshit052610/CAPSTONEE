@@ -48,3 +48,5 @@ h1,h2,h3,h4,p { margin:0; } button,input { font-family:inherit; } a { color:inhe
 @media(min-width:651px) and (max-width:800px) { .signal-art { top:415px; transform:scale(.43); } }
 @media(max-width:650px) { .hero h1 { font-size:46px; }.hero h1 em { font-size:52px; max-width:340px; }.signal-art { transform:scale(.52); }.signal-grid { box-shadow:32px -10px 60px 10px color-mix(in oklch,var(--primary) 25%,transparent); } }
 @media(prefers-reduced-motion:reduce) { .signal-wave rect { animation:none; } }
+.hero h1 em { display:inline-block; vertical-align:top; }
+@media(max-width:650px) { .signal-art .low-risk { top:340px; bottom:auto; right:42px; }.signal-art .signal-sample { top:395px; bottom:auto; left:65px; } }
