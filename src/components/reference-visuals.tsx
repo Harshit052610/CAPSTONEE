@@ -8,7 +8,7 @@ export function ReferenceHero() {
   return <section className="hero">
     <div className="hero-copy">
       <div className="eyebrow hero-eyebrow">Security intelligence, made effortless.</div>
-      <h1>See the signal<em>before it becomes<br />noise.</em></h1>
+      <h1 data-testid="hero-title">See the signal<br /><em>before it becomes noise.</em></h1>
       <p>Sentinel AI turns raw security events into clear, human decisions<br className="desktop-break" /> — so your team can move quickly, without the guesswork.</p>
       <div className="hero-actions"><Button onClick={() => document.getElementById('analyze')?.scrollIntoView({ behavior: 'smooth' })}>Start an Analysis<ArrowRight /></Button><Button variant="ghost" onClick={() => document.getElementById('overview')?.scrollIntoView({ behavior: 'smooth' })}>Explore overview<ArrowDown /></Button></div>
     </div>
