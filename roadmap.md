@@ -1,5 +1,5 @@
 # Sentinel AI
-- [ ] Match inspected headline fonts and spacing; refine compact signal shadows and verify all themes
+- [x] Match inspected headline fonts and spacing; refine compact signal shadows and verify all themes
 - [x] Match supplied references: typography, hero, navigation, metrics, workspace, history risk pulse, and themes
 - [x] Verify redesigned pages, theme persistence, and editable examples
 - [x] Premium interface, three persistent themes, overview and navigation
