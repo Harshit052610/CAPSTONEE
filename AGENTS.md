@@ -13,3 +13,4 @@
 - Validate event payloads with the shared schema in both the browser and server handler; normalize only actual webhook response fields, leaving missing values empty.
 - Send n8n requests through a public server function with a server-only HTTPS destination and optional bearer secret; browser code never receives webhook credentials.
 - Theme preferences and capped analysis history use browser storage, as explicitly requested; do not move that history into Cloud without a new requirement.
+- Reference-led hero, metrics, and risk chart are separate presentation components; the chart derives daily averages from stored history to avoid fabricated live analytics.
