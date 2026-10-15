@@ -1,4 +1,5 @@
 import { Activity, ArrowDown, ArrowRight, BarChart3, Check, Gauge, Info, ShieldAlert, Wifi } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { riskPulse } from '@/lib/risk-pulse';
 import type { HistoryEntry } from '@/lib/sentinel';
@@ -31,7 +32,9 @@ export function ReferenceMetrics({ rows, sample, configured }: { rows: HistoryEn
 }
 
 export function RiskPulse({ history }: { history: HistoryEntry[] }) {
-  const pulse = riskPulse(history);
+  const [today, setToday] = useState<Date | null>(null);
+  useEffect(() => { setToday(new Date()); }, []);
+  const pulse = riskPulse(today ? history : [], today ?? new Date('2000-01-30T00:00:00Z'));
   const coordinates = pulse.points.map((score, i) => `${30 + i * 24},${190 - (score ?? 0) * 1.5}`).join(' ');
   return <div className="risk-pulse"><div className="pulse-heading"><div><div className="eyebrow">Risk pulse</div><h3>A quieter view of risk.</h3><p>Average daily risk score from the last 30 days of this browser’s history.</p></div><span className="sample-pill">30 days</span></div><div className="pulse-body"><div className="pulse-chart"><svg viewBox="0 0 756 220" role="img" aria-label="Average daily risk scores over 30 days"><line x1="30" x2="726" y1="50" y2="50" className="pulse-guide" /><line x1="30" x2="726" y1="120" y2="120" className="pulse-guide" /><line x1="30" x2="726" y1="190" y2="190" className="pulse-guide" /><polygon points={`30,190 ${coordinates} 726,190`} className="pulse-area" /><polyline points={coordinates} className="pulse-line" />{pulse.points.map((score, i) => score !== null && <circle key={i} cx={30 + i * 24} cy={190 - score * 1.5} r="4.5" className="pulse-point"><title>{Math.round(score)} / 100</title></circle>)}</svg><div className="pulse-axis"><span>{pulse.start.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</span><span>Today</span></div></div><div className="pulse-stats"><div><span>Average risk</span><strong>{pulse.average ?? '—'}<small>/100</small></strong></div><div><span>Highest day</span><strong>{pulse.highest ?? '—'}<small>/100</small></strong></div><div><span>Active days</span><strong>{pulse.activeDays}<small>/30</small></strong></div></div></div><div className="pulse-note"><Info size={14} />{history.some(h => h.sample) ? 'Demo entries are included; real analyses are added here automatically.' : 'Based on analyses saved in this browser.'}</div></div>;
 }
