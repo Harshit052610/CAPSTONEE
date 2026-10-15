@@ -16,3 +16,4 @@
 - Reference-led hero, metrics, and risk chart are separate presentation components; the chart derives daily averages from stored history to avoid fabricated live analytics.
 
 - Keep reference headline font tokens scoped to the hero, separate from body typography, so reference refinements do not alter the workspace.
+- Self-host the hero's italic display face as a variable font package instead of a CDN link, so the exact weight the reference specifies renders instead of snapping to a served static.
